@@ -13,7 +13,7 @@ pip install whatnot
 ```python
 from whatnot import What
 
-w = What('myemail@example.com', 'mypassword')
+what = What(email='myemail@example.com', password='mypassword')
 ```
 
 #### What(email: str = None, password: str = None)
@@ -47,7 +47,7 @@ Returns a dictionary of results that match a query.
 
 **Valid Filters**
 
-*Note: filters values are exactly the same as the facts on whatnot.com*
+*Note: filters values are exactly the same as the facets on whatnot.com*
 
 - in_stock: bool
 
@@ -86,4 +86,19 @@ Returns a dictionary of a products' sales history.
 #### get_raffle_drops(before: str = None, after: str = None, first: int = None, last: int = None) ->
 
 Returns a dictionary of a raffle drops in a given date range.
+
+#### get_livestreams(status: str = 'playing') -> dict
+
+Returns a dictionary of livestreams.
+
+- status: str (must be 'playing', 'ended', 'created', 'cancelled', or 'stopped')
+
+#### get_users(username: str, before: str = None, after: str = None, first: int = None, last: int = None)
+
+Returns a dictionary of users.
+
+- username: str (users that contain the query will be returned)
+
+
+
 
