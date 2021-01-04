@@ -44,12 +44,19 @@ Returns a dictionary of results that match a query.
 *query* A query string
 
 *filters* a dictionary of valid filters to apply
-    **Valid Filters**
+
+**Valid Filters**
+
     - in_stock: bool
+    
     - category: list[str]
+    
     - prices: list[str]
+    
     - product_line: list[str]
+    
     - years: list[str]
+    
     - cards_set__profile: list[str]
 
 Example:
