@@ -19,7 +19,8 @@ what = What(email='myemail@example.com', password='mypassword')
 #### What(email: str = None, password: str = None)
 
 Constructor that initializes a new What instance. If the correct
-credentials are provided, your authorization token is cached.
+credentials are provided, your authorization token is cached and methods that require 
+authorization are allowed.
 
 #### am_i() -> dict
 
@@ -93,12 +94,8 @@ Returns a dictionary of livestreams.
 
 - status: str (must be 'playing', 'ended', 'created', 'cancelled', or 'stopped')
 
-#### get_users(username: str, before: str = None, after: str = None, first: int = None, last: int = None)
+#### get_users(query: str, before: str = None, after: str = None, first: int = None, last: int = None)
 
 Returns a dictionary of users.
 
-- username: str (users that contain the query will be returned)
-
-
-
-
+- query: str (users that contain the query will be returned)

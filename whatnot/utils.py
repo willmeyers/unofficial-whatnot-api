@@ -16,4 +16,11 @@ def query(query, variables):
 
 
 def send_mutation(query, variables):
-    pass
+    resp = requets.post(f'{BASE_URL}',
+        params=variables,
+        data={
+            'query': query
+        }
+    )
+
+    return resp.json()
